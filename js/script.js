@@ -1,28 +1,79 @@
-let correoUsuario = '';
+//Objeto//
+
+class tejido{
+    
+    constructor (producto, material, precio){
+
+    this.producto = producto;
+    this.material = material;
+    this.precio = parseFloat(precio);
+
+}
+
+descuentoEnEfectivo(){
+    this.precio = this.precio*0.8;
+}
+
+}
+
+const sweater = new tejido('sweater','lana', 15000);
+const polera = new tejido('polera','lanafina', 12000);
+const remera = new tejido ('remera','hilo', 9000);
+
+sweater.descuentoEnEfectivo();
+console.log(sweater.precio);
+
+polera.descuentoEnEfectivo()
+console.log(polera.precio);
+
+remera.descuentoEnEfectivo()
+console.log(remera.precio);
+
+
+//array - métodos de búsqueda - filtrado//
+
+
+const prenda = [sweater, polera, remera];
+prenda.pop();
+console.log(prenda);
+
+console.log('El index del sweater de lana es ' + prenda.lastIndexOf(sweater));
+
+console.log(prenda.includes('lana'));
+console.log(prenda.includes(sweater));
+console.log(prenda.includes('hilo'));
+console.log(prenda.includes(polera));
+console.log(prenda.includes(remera));
+
+
+const filtradoPrecio = prenda.find((prenda)=>prenda.precio>=8000);
+console.log(filtradoPrecio);
+
+
+
 function ingreso(){
 
     let ingreso = false;
-
+    
     for (let i=2; i>=0; i--){
-
-    correoUsuario = prompt('¡Hola, esto es Vegan Knits, prendas tejidas a mano! Ingresá tu correo:');
-
-    if (validarCorreo(correoUsuario))
-    {
+    
+    let keyword = prompt('¡Hola, esto es Vegan Knits, tejidos a mano! Escribí la prenda que te interesa: sweater, polera o remera.');
+    const buscarProducto = prenda.filter((prenda)=>prenda.producto == keyword.toLowerCase());
+    if (buscarProducto.length>0)
+    { 
     ingreso = true;
     break;
     }
     else{
-        alert('Dirección incorrecta. Te quedan '+i+' intentos.');
-
+        alert('No contamos con stock de esa prenda, por favor selecciona otra. Te quedan '+i+' intentos.');
     }
     }
-    return ingreso;
+return ingreso;
 }
 
-function validarCorreo (correoUsuario){
+function validarKeyword (keyword){
 
-if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(correoUsuario)){
+if (keyword){
     return true;
 }
 else{
@@ -32,7 +83,7 @@ else{
 }
 
 if (ingreso()){
-    let opcion1= prompt('Todo tipo de tejidos en fibras veganas. Elegí una opcion para tu carrito: \n1-Sweater Invierno \n2-Sweater Media Estación \nPresioná X para finalizar.')
+    let opcion1= prompt('Todo tipo de tejidos en fibras veganas. Elegí una opcion para tu carrito: \n1-Sweater Invierno \n2-Sweater Media Estación \n3-Prenda de Verano \nPresioná X para finalizar.')
     while (opcion1 != 'X' && opcion1 != 'x'){
 
         switch(opcion1){
@@ -109,17 +160,47 @@ if (ingreso()){
                     break;
                 }
                 
-                break;
-                default: alert('Opción inválida');
-                break;
-        }
-        opcion1= prompt('Todo tipo de tejidos en fibras veganas. Elegí una opcion para tu carrito: \n1-Sweater Invierno \n2-Sweater Media Estación \nPresioná X para finalizar.')
+            break;
 
-                
+            case '3':
+                let opcion4= prompt('Elegí la cantidad de cuotas para tu Prenda de Verano \n1- 1 cuota \n2- 2 cuotas \n3- 3 cuotas');
+                let precioVer = 9000;
+                switch (opcion4) {
+                    
+                    case '1': let opcionFinalVer1 = prompt('Una cuota de: $'+precioVer + '\n1- Comprar \n2- Volver al menú.');
 
+                    if (opcionFinalVer1 == '1'){
+                        alert('¡Gracias por tu compra!')
+                    
+                    }
+                    break;
+    
+                    case '2': let opcionFinalVer2 = prompt('Dos cuotas de: $'+precioVer/2 + '\n1- Comprar \n2- Volver al menú.');
+
+                    if (opcionFinalVer2 == '1'){
+                        alert('¡Gracias por tu compra!')
+                    
+                    }
+                    break;
+    
+                    case '3': let opcionFinalVer3 = prompt('Tres cuotas de: $'+precioVer/3 + '\n1- Comprar \n2- Volver al menú.');
+
+                    if (opcionFinalVer3 == '1'){
+                        alert('¡Gracias por tu compra!')
+                    }
+                    break;
+    
+                    default: alert('Opción inválida');
+                    break;
+                }
+            
+            break;
+            default: alert('Opción inválida');
+            break;
     }
-
-}else{
-    alert('Inicio de sesión incorrecto. Intentá nuevamente.')
+    opcion1= prompt('Todo tipo de tejidos en fibras veganas. Elegí una opcion para tu carrito: \n1-Sweater Invierno \n2-Sweater Media Estación \n3-Prenda de Verano \nPresioná X para finalizar.')            
 }
 
+}else{
+alert('Inicio de sesión incorrecto. Intentá nuevamente.')
+}
