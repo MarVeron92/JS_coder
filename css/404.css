@@ -16,26 +16,25 @@
     justify-content: center;
     align-items: center;
     color: #171616; }
-
-.btn-more:hover, .btn-rounded:hover {
+    .btn-more:hover, .btn-rounded:hover {
     background-color: #d0c6cd;
     color: #171616; }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.7em;
-  line-height: 2em;
-  color: white;
-  padding: 4px;
-  font-weight: 400;
-  font-style: italic; }
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.7em;
+    line-height: 2em;
+    color: white;
+    padding: 4px;
+    font-weight: 400;
+    font-style: italic; }
 
 .bg-btn {
-  background-color: #8b8488; }
+    background-color: #8b8488; }
 
 header .navbar {
-  padding: 0%; }
-  header .navbar .container-fluid {
+    padding: 0%; }
+    header .navbar .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,6 +127,13 @@ h5 {
   max-width: 100%;
   height: auto; }
 
+.rounded {
+  border-radius: 15px; }
+
+.carousel .carousel-inner img {
+  height: auto;
+  object-fit: cover;
+  object-position: center; }
 
 main #slide div {
   animation-duration: 2s;
@@ -161,3 +167,4 @@ body {
   width: 40px;
   height: 30px;
   padding-right: 10px; }
+
