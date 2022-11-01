@@ -7,19 +7,35 @@
 .bg-box2 {
     background-color: #e7d8ef; }
 
-.btn-more, .btn-rounded {
-    width: 100px;
-    height: 30px;
-    background: linear-gradient(to top, #8b8488, #454244);
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #171616; }
+#btn-carrito{
+    background-color: #343232;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    padding: 4px;
+    margin-bottom: 5px; }
+    #btn-comprar:hover {
+      background-color: red;
+      color: white;
+      border: 2px solid red; }
 
-.btn-more:hover, .btn-rounded:hover {
-    background-color: #d0c6cd;
-    color: #171616; }
+    .btn-eliminar {
+      margin-left: 350px;
+      background-color: white;
+      color: blue;
+      border: 2px solid blue;
+      border-radius: 5px;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      padding-right: 8px;
+      padding-left: 8px; }
+      .btn-eliminar:hover {
+        background-color: blue;
+        color: white;
+        border: 2px solid blue; }
+
 
 h3 {
   font-family: "Montserrat", sans-serif;
@@ -61,6 +77,7 @@ header .navbar {
 #slide div {
   animation-duration: 2s;
   animation-name: slidein; }
+
 
 .bg-box3 {
   background-color: #56ea86; }

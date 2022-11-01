@@ -56,45 +56,75 @@
 
     <!--galeria-->
     <h1 class="textcenter fw-bolder mt-3">ELEGÍ TU SWEATER</h1>
+    <div class="row text-center m-3" id="cards"></div>
 
-    <div class="row" id="lista-productos"></div>
-    <section class="py-3 textcenter container-fluid">
-      <div class="row">
-        <article class="col-sm-12 col-md-6 col-lg-3">
-          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/chaleco eucalipto.jpg" alt="chaleco de lana verde">
-          <h5 class="fw-bolder">CHALECO EUCALIPTO</h5>
-          <p class="fw-bolder" >$7.500</p>
-          <a href="views/404.html" class="btn btn-rounded text-white w-100 mb-2">Agregar al carrito</a>
-        </article><!--ends article I-->
 
-        <article class="col-sm-12 col-md-6 col-lg-3">
-          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/sweater rayitas.jpg" alt="sweater lana rayado blanco">
-          <h5 class="fw-bolder ">SWEATER LINES</h5>
-          <p class="fw-bolder" >$9.500</p>
-          <a href="views/404.html" class="btn btn-rounded text-white w-100 mb-2">Agregar al carrito</a>
-        </article><!--ends article II-->
+    <div class="row text-center m-3" id="lista-productos">
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-3">
+          <div class="card">
+          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/eucalipto.jpg" alt="chaleco de lana verde" class="card-img-top">
+          <div class="card-body">
+          <h5 class="card-title">CHALECO EUCALIPTO</h5>
+          <p class="card-text" >$ <span>7500</span></p>
+          <button id="btn-carrito" value="1">Agregar al carrito</button>
+          </div>
+        </div>
+        </div><!--ends div I-->
 
-        <article class="col-sm-12 col-md-6 col-lg-3">
-          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/sweater menta.jpg" alt="sweater lana rayado verde y marron">
-          <h5 class="fw-bolder">SWEATER MINT</h5>
-          <p class="fw-bolder" >$8.500</p>
-          <a href="views/404.html" class="btn btn-rounded text-white w-100 mb-2">Agregar al carrito</a>
-        </article><!--ends article III-->
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-3">
+          <div class="card">
+          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/lines.jpg" alt="sweater lana rayado blanco" class="card-img-top">
+          <div class="card-body">
+          <h5 class="card-title">SWEATER LINES</h5>
+          <p class="card-text">$ <span>9500</span></p>
+          <button id="btn-carrito" value="2">Agregar al carrito</button>
+        </div>
+        </div>
+        </div><!--ends div II-->
 
-        <article class="col-sm-12 col-md-6 col-lg-3">
-          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/sweater rayas bordo.jpg" alt="sweater lana rayado bordo y blanco">
-          <h5 class="fw-bolder">SWEATER LINE</h5>
-          <p class="fw-bolder" >$8.500</p>
-          <a href="views/404.html" class="btn btn-rounded text-white w-100 mb-2">Agregar al carrito</a>
-        </article><!--ends article IV-->
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-3">
+          <div class="card">
+          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/menta.jpg" alt="sweater lana rayado verde y marron" class="card-img-top">
+          <div class="card-body">
+          <h5 class="card-title">SWEATER MENTA</h5>
+          <p class="card-text">$ <span>85000</span></p>
+          <button  id="btn-carrito" value="3">Agregar al carrito</button>
+        </div>
+        </div>
+        </div><!--ends div III-->
 
+        <dic class="col-12 col-sm-4 col-md-3 col-lg-2 mb-3">
+          <div class="card">
+          <img class="transformacion rounded img-thumbnail w-100 d-block" src="img/franca.jpg" alt="sweater lana rayado bordo y blanco" class="card-img-top">
+          <div class="card-body">
+          <h5 class="card-title">SWEATER FRANCA</h5>
+          <p class="card-text">$ <span>8500</span></p>
+          <button id="btn-carrito" value="4">Agregar al carrito</button>
+          </div>
+        </div>
       </div>
-    </div><!--ends container-->
+    </div><!--ends div-->
+
     
+<!-- simulador carrito -->
+<div class="m-4">
+  <h4>Carrito de compras</h4>
+  <table class="table">
+    <tbody id="items"></tbody>
+    <tbody id="total-items"></tbody>
+    <tfoot>
+      <tr id="footer-carrito">
+          <th scope="row" colspan="5">Agregá las prendas a tu carrito </th>
+      </tr>
+    </tfoot>
+  </table>
+</div>    
 
 
         
     </header>
+
+    <!--ends header-->
 
 
 
@@ -103,6 +133,14 @@
 
 
     <!--inicia maps-->
+
+    <section class="py-3 bg-box3">
+      <div class="container-fluid textcenter">
+        <h1>VISITÁ NUESTRO LOCAL</h1>
+      <div class="row">
+            </div>
+            </section>
+
     <section class="py-5 container-fluid text-center ">
       <iframe class=" d-flex img-fluid round mx-auto d-block"  
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1944107774516!2d-58.37696758505242!3d-34.59924516476792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb0b1afcaf%3A0x8d53a5cf4f399e9c!2zR2FsZXLDrWFzIFBhY8OtZmljbw!5e0!3m2!1ses-419!2sar!4v1656082936650!5m2!1ses-419!2sar" width="600" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
