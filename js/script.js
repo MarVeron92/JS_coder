@@ -1,6 +1,6 @@
 const listProductos = [];
 
-//productos//
+//Productos del carrito//
 
 const eucalipto ={
     "precio":75000,
